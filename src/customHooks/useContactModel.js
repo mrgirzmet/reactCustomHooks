@@ -1,7 +1,6 @@
 import { useState } from "react";
-import model from "../models/model";
 
-export function useContactModel({ defaultValue = {} } = {}) {
+const useContactModel = ({ defaultValue = {} } = {}) => {
   const [name, setName] = useState(defaultValue.name || "");
   const [email, setEmail] = useState(defaultValue.email || "");
 
@@ -18,6 +17,6 @@ export function useContactModel({ defaultValue = {} } = {}) {
       }
     }
   };
-}
+};
 
 export default useContactModel;

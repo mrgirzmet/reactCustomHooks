@@ -8,10 +8,10 @@
     "@svgr/webpack": "4.3.2",
     "@typescript-eslint/eslint-plugin": "1.13.0",
     "@typescript-eslint/parser": "1.13.0",
-    "babel-eslint": "10.0.2",
     "babel-jest": "^24.8.0",
     "babel-loader": "8.0.6",
     "babel-plugin-named-asset-import": "^0.3.3",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "babel-preset-react-app": "^9.0.1",
     "camelcase": "^5.2.0",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
@@ -31,6 +31,9 @@
     "jest-resolve": "24.8.0",
     "jest-watch-typeahead": "0.3.1",
     "mini-css-extract-plugin": "0.5.0",
+    "mobx": "^5.14.0",
+    "mobx-react": "^6.1.4",
+    "mobx-react-lite": "^1.5.0",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.5.0",
     "postcss-flexbugs-fixes": "4.1.0",
@@ -38,6 +41,7 @@
     "postcss-normalize": "7.0.1",
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
+    "promise.prototype.finally": "^3.1.1",
     "react": "^16.9.0",
     "react-app-polyfill": "^1.0.2",
     "react-dev-utils": "^9.0.3",
@@ -127,9 +131,21 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "env": {
+      "production": {}
+    },
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ]
     ]
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.2",
     "eslint": "^6.4.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.3.0",

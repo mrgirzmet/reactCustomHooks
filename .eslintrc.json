@@ -40,5 +40,6 @@
         "no-plusplus": 0,
         "react/jsx-one-expression-per-line": 0,
         "import/extensions": 0
-    }
+    },
+    "parser": "babel-eslint"
 }

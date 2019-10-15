@@ -1,5 +1,5 @@
 import React from "react";
-import useContactModel from "../models/model.js";
+import useContactModel from "../customHooks/useContactModel.js";
 
 const Contact = ({ onRemove }) => {
   const model = useContactModel();
